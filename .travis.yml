@@ -16,11 +16,9 @@ before_install:
   - java -jar selenium-server-standalone-2.43.1.jar &> /dev/null &
 
 install:
-  - travis_retry npm install --silent
+  - travis_retry npm install
   # copy over the configuration that can be used to start the server.
   - cp config.py.example config.py
-  - npm install
-  - sleep 5
   - python run.py
 
 # now run the tests!
