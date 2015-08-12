@@ -27,7 +27,7 @@ define(['intern/lib/args'], function (args) {
     siteRoot: siteRoot,
 
     environments: [
-      { browserName: 'firefox' }
+      { browserName: 'firefox', version: ['39'] }
     ],
 
     // Beauty, Bob.
