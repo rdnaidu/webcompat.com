@@ -22,7 +22,13 @@ define([
         .then(function (text) {
           assert.equal(text, 'Bug reporting\nfor the internet.');
         })
-        .end();
+        .end()
+        .execute(function () {
+          return navigator.userAgent;
+        })
+        .then(function(ua) {
+          console.log(ua);
+        });
     },
 
     'my issues (when logged in)': function() {
