@@ -29,6 +29,7 @@ before_install:
   - java -jar selenium-server-standalone-2.46.0.jar &> /dev/null &
   - cd -
   - which firefox
+  - firefox --version
 
 install:
   - travis_retry npm install -g grunt-cli
