@@ -18,17 +18,17 @@ define([
     'front page loads': function () {
       return this.remote
         .get(require.toUrl(url))
-        .findByCssSelector('.wc-Hero-title').getVisibleText()
-        .then(function (text) {
-          assert.equal(text, 'Bug reporting\nfor the internet.');
-        })
-        .end()
         .execute(function () {
           return navigator.userAgent;
         })
         .then(function(ua) {
           console.log(ua);
-        });
+        })
+        .findByCssSelector('.wc-Hero-title').getVisibleText()
+        .then(function (text) {
+          assert.equal(text, 'Bug reporting\nfor the internet.');
+        })
+        .end();
     },
 
     'my issues (when logged in)': function() {
