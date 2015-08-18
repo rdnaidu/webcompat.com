@@ -31,7 +31,7 @@ define(['intern/lib/args'], function (args) {
     ],
 
     // Beauty, Bob.
-    reporters: 'pretty',
+    reporters: 'console',
 
     // Functional test suite(s) to run in each browser once non-functional tests are completed
     functionalSuites: [ 'tests/functional' ],
