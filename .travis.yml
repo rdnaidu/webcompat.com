@@ -28,6 +28,7 @@ before_install:
   - "mkdir -p $HOME/.selenium && cd $HOME/.selenium && wget -nc http://selenium-release.storage.googleapis.com/2.46/selenium-server-standalone-2.46.0.jar"
   - java -jar selenium-server-standalone-2.46.0.jar &> /dev/null &
   - cd -
+  - which firefox
 
 install:
   - travis_retry npm install -g grunt-cli
